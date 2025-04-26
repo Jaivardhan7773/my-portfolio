@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('https://jaivardhan.com/bg2.gif') no-repeat center center fixed;
+    background-size: cover;
+    backdrop-filter:blur(5px);
+    cursor: url("/public/vite.svg"), auto;
+    /* overflow: hidden; */
+  }
+  
+.maincontainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  backdrop-filter: brightness(0.9);
+}
+
+.homedata {
+  padding: 2rem;
+  border-radius: 1rem;
+  color: #fff;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.profilepic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+}
+
+.name {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.stack {
+  color: #ccc;
+  font-size: 1rem;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.socials a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.socials a:hover {
+  transform: scale(1.2);
+  color: #00ffff;
+}
+.rowdiv{
+  display: flex;
+}
+.myimgdiv{
+  padding: 40px;
+}
+.myimage{
+  height: 400px;
+  max-width: 350px;
+  object-fit: cover;
+}
+.aboutusdiv{
+  font-size: 20px;
+  color: white;
+  padding: 40px;
+}
+.aboutustext{
+  padding-top: 50px;
+}
+p::selection {
+  color: white;
+  background: rgba(0, 126, 128, 0.336);
+}

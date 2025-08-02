@@ -4,7 +4,7 @@ body {
     background: url('https://jaivardhan.com/bg2.gif') no-repeat center center fixed;
     background-size: cover;
     backdrop-filter:blur(5px);
-    cursor: url("/public/vite.svg"), auto;
+    /* cursor: url("/public/vite.svg"), auto; */
     /* overflow: hidden; */
   }
   
@@ -56,26 +56,52 @@ body {
   transform: scale(1.2);
   color: #00ffff;
 }
-.rowdiv{
+
+
+.rowdiv {
   display: flex;
+  flex-wrap: wrap; /* Allows items to stack on small screens */
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
-.myimgdiv{
-  padding: 40px;
+
+.myimgdiv {
+  padding: 20px;
+  flex: 1 1 300px; /* Make it flexible */
+  display: flex;
+  justify-content: center;
 }
-.myimage{
+
+.myimage {
   height: 400px;
-  max-width: 350px;
+  max-width: 100%;
   object-fit: cover;
+  border-radius: 10px;
 }
-.aboutusdiv{
-  font-size: 20px;
+
+.aboutusdiv {
+  font-size: 18px;
   color: white;
-  padding: 40px;
+  padding: 20px;
+  flex: 1 1 300px;
 }
-.aboutustext{
-  padding-top: 50px;
+
+.aboutustext {
+  padding-top: 20px;
 }
+
 p::selection {
   color: white;
   background: rgba(0, 126, 128, 0.336);
+}
+
+/* Optional: Improve layout on smaller screens */
+@media (max-width: 768px) {
+  .aboutusdiv {
+    text-align: center;
+  }
+  .myimage {
+    height: 300px;
+  }
 }

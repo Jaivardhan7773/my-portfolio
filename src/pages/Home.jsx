@@ -5,14 +5,14 @@ const Home = () => {
         <>
             <div className="maincontainer">
                 <div className="homedata">
-                    <img src="https://i.ibb.co/xSqJSdqt/freaky-ahh-cat.jpg" alt="profile" className="profilepic" />
+                    <img src="https://i.ibb.co/KBBZSKk/myavatar.png" alt="profile" className="profilepic" />
                     <h1 className="name">Jaivardhan</h1>
                     <p className="stack">Full-Stack Developer | MERN | MongoDB | JWT | Redux Toolkit | REST APIs | React 19</p>
                     <div className="socials">
-                        <a href="#"><i className="fa fa-envelope"></i></a>
-                        <a href="#"><i className="fa-brands fa-github"></i></a>
-                        <a href="#"><i className="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i className="fa-brands fa-instagram"></i></a>
+                        <a href="mailto:jaivardhansinghrathore17@gmail.com"><i className="fa fa-envelope" ></i></a>
+                        <a href="https://github.com/Jaivardhan7773" target='_blank'><i className="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/jaivardhan7773/" target='_blank'><i className="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/jaivardhan7773_/" target='_blank'><i className="fa-brands fa-instagram"></i></a>
 
                     </div>
                 </div>
@@ -24,7 +24,7 @@ const Home = () => {
             <div className="container">
                 <div className="rowdiv">
                     <div className="myimgdiv">
-                        <img src="https://i.ibb.co/xSqJSdqt/freaky-ahh-cat.jpg" alt="profile" className='myimage' />
+                        <img src="https://i.ibb.co/7JNYpgQ9/myavatarjpg.jpg" alt="profile" className='myimage' />
                     </div>
                     <div className="aboutusdiv">
                         <p className='aboutustext'>

@@ -18,12 +18,12 @@ const NavBar = () => {
       </div>
 
       <div className="right-controls">
-        <div className="theme-toggle">
+        {/* <div className="theme-toggle">
           <label className="switch">
             <input type="checkbox" />
             <span className="slider round"></span>
           </label>
-        </div>
+        </div> */}
         <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
           <span></span>
           <span></span>

@@ -1,5 +1,6 @@
 import React from "react";
 import SpotlightCard from "../components/Spotlightcard/SpotlightCard ";
+import TextType from '../components/texttype/TextType'
 const roles = [
   {
     title: "Web Developer",
@@ -103,7 +104,7 @@ const tools = [
   },
   {
     name: "Vercel",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
+    icon: "https://flow-public.nimbuspop.com/flow-apps/vercel.png",
   },
   {
     name: "Netlify",
@@ -126,7 +127,7 @@ const tools = [
 
 const DeveloperCard = ({ title, image }) => (
   <div className="skill-col" >
-    <img src={image} alt={title} style={{maxHeight:"50px" , maxWidth:"50px" , margin:"10px"}} />
+    <img src={image} alt={title} className="block mx-auto" style={{ maxHeight: "50px", maxWidth: "50px", margin: "10px" }} />
     <h4 className="skill-title">{title}</h4>
   </div>
 );
@@ -134,53 +135,65 @@ const DeveloperCard = ({ title, image }) => (
 const Skills = () => {
   return (
     <>
-      <div className="container" style={{marginTop:"50px" , paddingBottom:"50px"}}>
-        <div className="row" style={{ display: "flex" }}>
-          {roles.map((role, index) => (
-            <div className="col">
-              <SpotlightCard
-                key={index}
-                className="custom-spotlight-card"
-                spotlightColor="rgba(0, 229, 255, 0.2)"
-              >
-                <DeveloperCard title={role.title} image={role.image} />
-              </SpotlightCard>
-            </div>
-          ))}
+      <div style={{ backgroundColor: "rgb(5 8 22", height: "fit-content" }}>
+        <div className="container" style={{ paddingTop: "50px", paddingBottom: "50px" }}>
+          <div className="row" style={{ display: "flex" }}>
+            {roles.map((role, index) => (
+              <div className="col">
+                <SpotlightCard
+                  key={index}
+                  className="custom-spotlight-card"
+                  spotlightColor="rgba(0, 229, 255, 0.2)"
+                >
+                  <DeveloperCard title={role.title} image={role.image} />
+                </SpotlightCard>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
 
 
-<div className="container">
-  <div className="row" style={{ display: "flex", flexWrap: "wrap" }}>
-    {technologies.map((tech, index) => (
-      <div className="col" key={index}>
-        <div className="tech" style={{ textAlign: "center", padding: "10px" }}>
-          <img src={tech.icon} alt={tech.name} style={{ width: "60px", height: "60px" }} />
-          <span className="tech-title" style={{ color: "white", display: "block", marginTop: "5px" }}>
-            {tech.name}
-          </span>
+        <h1 className="text-center text-white py-10">     <TextType
+          text={["Skills"]}
+          typingSpeed={75}
+          pauseDuration={1500}
+          showCursor={true}
+          cursorCharacter="|"
+        /> </h1>
+
+        <div className="container" style={{ paddingTop: "50px" }}>
+          <div className="row" style={{ display: "flex", flexWrap: "wrap" }}>
+            {technologies.map((tech, index) => (
+              <div className="col" key={index}>
+                <div className="tech" style={{ textAlign: "center", padding: "20px" }}>
+                  <img src={tech.icon} alt={tech.name} className="block mx-auto"  style={{ width: "60px", height: "60px" }} />
+                  <span className="tech-title" style={{ color: "white", display: "block", marginTop: "5px" }}>
+                    {tech.name}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    ))}
-  </div>
-</div>
 
 
-<div className="container">
-  <div className="row" style={{ display: "flex", flexWrap: "wrap" }}>
-    {tools.map((tool, index) => (
-      <div className="col" key={index}>
-        <div className="tech" style={{ textAlign: "center", padding: "10px" }}>
-          <img src={tool.icon} alt={tool.name} style={{ width: "60px", height: "60px" }} />
-          <span className="tech-title" style={{ color: "white", display: "block", marginTop: "5px" }}>
-            {tool.name}
-          </span>
+        <div className="container" style={{ paddingTop: "50px", paddingBottom: "80px" }}>
+          <div className="row" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", padding: "50px" }}>
+            {tools.map((tool, index) => (
+              <div className="col" key={index}>
+                <div className="tech" style={{ textAlign: "center", padding: "10px" }}>
+                  <img src={tool.icon} alt={tool.name}  className="block mx-auto" style={{ width: "60px", height: "60px" }} />
+                  <span className="tech-title" style={{ color: "white", display: "block", marginTop: "5px" }}>
+                    {tool.name}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
+
+
       </div>
-    ))}
-  </div>
-</div>
     </>
   );
 };

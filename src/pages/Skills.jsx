@@ -127,7 +127,11 @@ const tools = [
 
 const DeveloperCard = ({ title, image }) => (
   <div className="skill-col" >
-    <img src={image} alt={title} className="block mx-auto" style={{ maxHeight: "50px", maxWidth: "50px", margin: "10px" }} />
+    <img src={image} alt={title} className="block mx-auto" style={{ maxHeight: "50px",
+       maxWidth: "50px",
+        margin: "10px" ,
+          animation: "spin 10s linear infinite"
+            }} />
     <h4 className="skill-title">{title}</h4>
   </div>
 );
@@ -137,9 +141,11 @@ const Skills = () => {
     <>
       <div style={{ backgroundColor: "rgb(5 8 22", height: "fit-content" }}>
         <div className="container" style={{ paddingTop: "50px", paddingBottom: "50px" }}>
-          <div className="row" style={{ display: "flex" }}>
+          <div className="row"  style={{ display: "flex" }}>
             {roles.map((role, index) => (
-              <div className="col">
+              <div className="col"
+              key={role.title + index}
+              style={{boxShadow: '0px 20px 10px rgba(0, 0, 0, 0.2)'}}>
                 <SpotlightCard
                   key={index}
                   className="custom-spotlight-card"

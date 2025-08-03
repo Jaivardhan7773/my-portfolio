@@ -28,7 +28,7 @@ const Home = () => {
                         />
                     </div>
 
-                    <p className="stack">
+                    <div className="stack">
 
                         <TextType
                             text={["Full-Stack Developer | MERN | MongoDB | JWT | Redux Toolkit | REST APIs | React 19"]}
@@ -38,7 +38,7 @@ const Home = () => {
                             cursorCharacter="|"
                         />
 
-                    </p>
+                    </div>
                     <div className="socials">
                         <a href="mailto:jaivardhansinghrathore17@gmail.com"><i className="fa fa-envelope" ></i></a>
                         <a href="https://github.com/Jaivardhan7773" target='_blank'><i className="fa-brands fa-github"></i></a>

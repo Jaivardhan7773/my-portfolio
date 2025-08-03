@@ -11,9 +11,9 @@ const NavBar = () => {
 
       <div className={`navbar-links ${isOpen ? 'active' : ''}`}>
         <a href="#home" onClick={() => { window.scrollTo(0, 0); toggleMenu(); }}>Home</a>
-        <a href="#about" onClick={() => { window.scrollTo(0, 1000); toggleMenu(); }}>About</a>
+        <a href="#about" onClick={() => { window.scrollTo(0, 1050); toggleMenu(); }}>About</a>
+        <a href="#skills" onClick={() => { window.scrollTo(0, 1850); toggleMenu(); }}>Skills</a>
         <a href="#projects" onClick={() => { window.scrollTo(0, 0); toggleMenu(); }}>Projects</a>
-        <a href="#skills" onClick={toggleMenu}>Skills</a>
         <a href="#contact" onClick={toggleMenu}>Contact</a>
       </div>
 

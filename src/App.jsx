@@ -9,6 +9,7 @@ import Contact from './pages/Contact'
 import Footer from './pages/Footer'
 import React from 'react'
 import './App.css'
+import Projects from './pages/Projects';
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
    <Home/>
    <Skills/>
 
-   <div className='pt-5'>
+   {/* <div className='pt-5'>
 <CurvedLoop 
   marqueeText="MERN ✦ Stack ✦ Developer ✦ React ✦ Node ✦ MongoDB ✦ Express ✦"
   speed={4}
@@ -31,8 +32,10 @@ function App() {
   interactive={true}
   className="custom-text-style"
 />
-  </div>
+  </div> */}
   
+  {/* <Projects/> */}
+
 <Contact/>
 
 {/* <Footer/> */}

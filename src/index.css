@@ -1,13 +1,13 @@
 body {
-    margin: 0;
-    padding: 0;
-    background: url('https://jaivardhan.com/bg2.gif') no-repeat center center fixed;
-    background-size: cover;
-    backdrop-filter:blur(5px);
-    /* cursor: url("/public/vite.svg"), auto; */
-    /* overflow: hidden; */
-  }
-  
+  margin: 0;
+  padding: 0;
+  background: url('https://jaivardhan.com/bg2.gif') no-repeat center center fixed;
+  background-size: cover;
+  backdrop-filter: blur(5px);
+  /* cursor: url("/public/vite.svg"), auto; */
+  /* overflow: hidden; */
+}
+
 .maincontainer {
   height: 100vh;
   display: flex;
@@ -28,7 +28,7 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid #fff;
+  border: 3px solid #24ffe553;
   object-fit: cover;
 }
 
@@ -60,7 +60,8 @@ body {
 
 .rowdiv {
   display: flex;
-  flex-wrap: wrap; /* Allows items to stack on small screens */
+  flex-wrap: wrap;
+  /* Allows items to stack on small screens */
   justify-content: center;
   align-items: center;
   gap: 30px;
@@ -68,7 +69,8 @@ body {
 
 .myimgdiv {
   padding: 20px;
-  flex: 1 1 300px; /* Make it flexible */
+  flex: 1 1 300px;
+  /* Make it flexible */
   display: flex;
   justify-content: center;
 }
@@ -77,6 +79,7 @@ body {
   height: 400px;
   max-width: 100%;
   object-fit: cover;
+  border: 2px solid #00f2ff;
   border-radius: 10px;
 }
 
@@ -101,7 +104,26 @@ p::selection {
   .aboutusdiv {
     text-align: center;
   }
+
   .myimage {
     height: 300px;
   }
+}
+
+.skill-col {
+  text-align: center;
+}
+
+.skill-title {
+  color: white;
+  padding: 15px;
+}
+
+.custom-spotlight-card {
+  width: auto;
+  margin: 15px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

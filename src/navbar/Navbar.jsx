@@ -27,9 +27,9 @@ const NavBar = () => {
           <a href="#home" data-aos="fade-up"
             data-aos-duration="500" onClick={() => { window.scrollTo(0, 0); toggleMenu(); }}>Home</a>
           <a href="#about" data-aos="fade-up"
-            data-aos-duration="600" onClick={() => { window.scrollTo(0, 1050); toggleMenu(); }}>About</a>
+            data-aos-duration="600" onClick={() => { window.scrollTo(0, 0); toggleMenu(); }}>About</a>
           <a href="#skills" data-aos="fade-up"
-            data-aos-duration="700" onClick={() => { window.scrollTo(0, 1850); toggleMenu(); }}>Skills</a>
+            data-aos-duration="700" onClick={() => { window.scrollTo(0, 0); toggleMenu(); }}>Skills</a>
           <a href="#projects" data-aos="fade-up"
             data-aos-duration="800" onClick={() => { window.scrollTo(0, 0); toggleMenu(); }}>Projects</a>
           <a href="#contact" data-aos="fade-up"

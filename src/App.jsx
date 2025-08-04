@@ -52,6 +52,7 @@ useEffect(() => {
 
 <Contact/>
 
+
 {/* <Footer/> */}
 
    

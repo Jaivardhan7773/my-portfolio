@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <>
 
-            <div className="maincontainer">
+            <div className="maincontainer" id='home'>
                 <div className="homedata">
                     <img src="https://i.ibb.co/KBBZSKk/myavatar.png" alt="profile" className="profilepic block mx-auto" data-aos="fade-up"
                         data-aos-duration="400" />
@@ -89,10 +89,10 @@ const Home = () => {
             </div>
 
 
-            <div style={{ backgroundColor: "rgb(5 8 22", paddingTop: "50px" }}>
+            <div id='about' style={{ backgroundColor: "rgb(5 8 22", paddingTop: "50px" }}>
 
-                <p className="text-neutral-400 text-lg text-center ps-40" data-aos="fade-right" data-aos-duration="500" style={{ marginBottom: "-5px" }}>Introduction</p>
-                <h1 className="text-white text-center ps-60 pb-5" data-aos="fade-right" data-aos-duration="1000"> Overview.</h1>
+                <p className="text-neutral-400 text-lg text-center " data-aos="fade-right" data-aos-duration="500" style={{ marginBottom: "-5px" }}>Introduction</p>
+                <h1 className="text-white text-center pb-5" data-aos="fade-right" data-aos-duration="1000"> Overview.</h1>
                 <div className="container">
                     <div className="rowdiv">
                         <div className="myimgdiv" data-aos="fade-up"

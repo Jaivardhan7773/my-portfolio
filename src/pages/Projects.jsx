@@ -1,72 +1,53 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+const projects = [
+    {
+        name: "AizenX",
+        description: "An E-Learning platform with user roles, blog system, admin panel, and fake payment integration. Built using the MERN stack.",
+        link: "https://aizenx.netlify.app",
+        image: "https://i.ibb.co/5WgsqN58/Screenshot-2025-05-05-192142.png",
+    },
+    {
+        name: "SpeedTalk",
+        description: "A real-time chat app with rooms, typing indicator, and emoji support using Socket.IO and React.",
+        link: "https://speedtalk.netlify.app",
+        image: "https://i.ibb.co/n8zrxqkg/ae220394-8f76-4b9f-b5b7-1a73d5b3fa68.png",
+    },
+    {
+        name: "AstraJay",
+        description: "A futuristic portfolio and experimental UI playground built with animations, dark mode, and responsive layout.",
+        link: "https://astrajay.netlify.app",
+        image: "https://i.ibb.co/s96bWsX4/Screenshot-2025-08-04-142317.png",
+    },
+];
+
 const Projects = () => {
     return (
         <>
-            <Container fluid="md">
-                <Row className='py-5 px-2'>
-                    <Col>
-                        <Card style={{ width: '18rem' }} className='relative mx-auto my-3 p-3 bg-dark rounded-md'>
-                            <Card.Img variant="top" src="https://i.ibb.co/Y7Ffvztk/Screenshot-2025-05-05-192142.png" />
-                            <div class="absolute top-8 right-6 ">
-                                <a href="https://github.com/Jaivardhan7773" target='_blank' className='p-2 mx-1 bg-dark rounded-full' ><i className="fa-brands fa-github fa-lg text-white "></i></a>
-                                <a href="https://github.com/Jaivardhan7773" target='_blank' className='p-2  mx-1 bg-dark rounded-full'><i className="fa-solid fa-link fa-lg text-primary"></i></a>
+            <section id="projects" className="bg-gray-900 text-white py-16 px-4">
+                <div className="max-w-6xl mx-auto text-center">
+                    <h2 className="text-3xl sm:text-4xl font-bold mb-10 border-b pb-4 inline-block border-amber-500">My Projects</h2>
+                    <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                        {projects.map((project, index) => (
+                            <div key={index} className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+                                <img src={project.image} alt={project.name} className="w-full h-48 object-cover" />
+                                <div className="p-6 flex flex-col justify-between h-60">
+                                    <div>
+                                        <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
+                                        <p className="text-sm text-gray-300">{project.description}</p>
+                                    </div>
+                                    <a
+                                        href={project.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="mt-4 inline-block text-amber-400 hover:text-white transition font-medium"
+                                    >
+                                        Visit Project &rarr;
+                                    </a>
+                                </div>
                             </div>
-                            <Card.Body>
-                                <Card.Title className="text-white">AizenX Blogs</Card.Title>
-                                <Card.Text className="text-white">
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </Card.Text>
-
-                                <span className='text-primary'>#MERN</span><span className='text-green-600'>#Zustand</span><span className='text-pink-600'>#Advance</span>
-                                {/* <Button variant="primary">Go somewhere</Button> */}
-                            </Card.Body>
-                        </Card>
-                    </Col>
-
-                    <Col>
-                        <Card style={{ width: '18rem' }} className='mx-auto my-3 p-3  rounded-md bg-dark'>
-                            <Card.Img variant="top" src="https://i.ibb.co/Y7Ffvztk/Screenshot-2025-05-05-192142.png" />
-                            <div class="absolute top-8 right-6 ">
-                                <a href="https://github.com/Jaivardhan7773" target='_blank' className='p-2 mx-1 bg-dark rounded-full' ><i className="fa-brands fa-github fa-lg text-white "></i></a>
-                                <a href="https://github.com/Jaivardhan7773" target='_blank' className='p-2  mx-1 bg-dark rounded-full'><i className="fa-solid fa-link fa-lg text-primary"></i></a>
-                            </div>
-                            <Card.Body>
-                                <Card.Title className="text-white">Speed Talk chat</Card.Title>
-                                <Card.Text className="text-white">
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-
-                    <Col>
-                        <Card style={{ width: '18rem' }} className='mx-auto my-3 p-3 rounded-md bg-dark'>
-                            <Card.Img variant="top" src="https://i.ibb.co/Y7Ffvztk/Screenshot-2025-05-05-192142.png" />
-                            <div class="absolute top-8 right-6 ">
-                                <a href="https://github.com/Jaivardhan7773" target='_blank' className='p-2 mx-1 bg-dark rounded-full' ><i className="fa-brands fa-github fa-lg text-white "></i></a>
-                                <a href="https://github.com/Jaivardhan7773" target='_blank' className='p-2  mx-1 bg-dark rounded-full'><i className="fa-solid fa-link fa-lg text-primary"></i></a>
-                            </div>
-                            <Card.Body>
-                                <Card.Title className="text-white">Astra Jay</Card.Title>
-                                <Card.Text className="text-white">
-                                    Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.
-                                </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                </Row>
-            </Container>
-
-
+                        ))}
+                    </div>
+                </div>
+            </section>
         </>
     )
 }

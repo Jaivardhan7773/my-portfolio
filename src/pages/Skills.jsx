@@ -5,18 +5,22 @@ const roles = [
   {
     title: "Web Developer",
     image: "https://mern-rajesh-portfolio.web.app/assets/web.png",
+    duration:500,
   },
   {
     title: "React Developer",
     image: "https://mern-rajesh-portfolio.web.app/assets/frontend.png",
+    duration:700,
   },
   {
     title: "Backend Developer",
     image: "https://mern-rajesh-portfolio.web.app/assets/backend.png",
+    duration:900,
   },
   {
     title: "Full Stack Developer",
     image: "https://mern-rajesh-portfolio.web.app/assets/fullStack.png",
+    duration:1100,
   },
 ];
 
@@ -125,16 +129,16 @@ const tools = [
 ];
 
 
-const DeveloperCard = ({ title, image }) => (
-  <div className="skill-col" >
-    <img src={image} alt={title} className="block mx-auto" style={{ maxHeight: "50px",
+const DeveloperCard = ({ title, image , duration }) => (
+  <div className="skill-col"  data-aos="fade-right" data-aos-duration={duration}>
+    <img src={image} alt={title} className="block mx-auto animate-spin" style={{ maxHeight: "50px",
        maxWidth: "50px",
-        margin: "10px" ,
-          animation: "spin 10s linear infinite"
+        margin: "10px" 
             }} />
     <h4 className="skill-title">{title}</h4>
   </div>
 );
+
 
 const Skills = () => {
   return (
@@ -148,7 +152,7 @@ const Skills = () => {
               style={{boxShadow: '0px 20px 10px rgba(0, 0, 0, 0.2)'}}>
                 <SpotlightCard
                   key={index}
-                  className="custom-spotlight-card"
+                  className="custom-spotlight-card "
                   spotlightColor="rgba(0, 229, 255, 0.2)"
                 >
                   <DeveloperCard title={role.title} image={role.image} />
@@ -171,9 +175,9 @@ const Skills = () => {
           <div className="row" style={{ display: "flex", flexWrap: "wrap" }}>
             {technologies.map((tech, index) => (
               <div className="col" key={index}>
-                <div className="tech" style={{ textAlign: "center", padding: "20px" }}>
-                  <img src={tech.icon} alt={tech.name} className="block mx-auto"  style={{ width: "60px", height: "60px" }} />
-                  <span className="tech-title" style={{ color: "white", display: "block", marginTop: "5px" }}>
+                <div className="tech" style={{ textAlign: "center", padding: "40px" }}>
+                  <img src={tech.icon} alt={tech.name} className="block mx-auto" data-aos="zoom-out-up"  style={{ width: "70px", height: "60px" }} />
+                  <span className="tech-title"  data-aos="zoom-out-down" style={{ color: "white", display: "block", marginTop: "5px" }}>
                     {tech.name}
                   </span>
                 </div>
@@ -188,8 +192,8 @@ const Skills = () => {
             {tools.map((tool, index) => (
               <div className="col" key={index}>
                 <div className="tech" style={{ textAlign: "center", padding: "10px" }}>
-                  <img src={tool.icon} alt={tool.name}  className="block mx-auto" style={{ width: "60px", height: "60px" }} />
-                  <span className="tech-title" style={{ color: "white", display: "block", marginTop: "5px" }}>
+                  <img src={tool.icon} alt={tool.name}  className="block mx-auto" data-aos="zoom-out-up"  style={{ width: "60px", height: "60px"  }} />
+                  <span className="tech-title"  data-aos="zoom-out-down" style={{ color: "white", display: "block", marginTop: "5px" }}>
                     {tool.name}
                   </span>
                 </div>

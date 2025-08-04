@@ -1,4 +1,6 @@
 import './index.css'
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 import Navbar from './navbar/Navbar'
 import Home from './pages/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -7,12 +9,17 @@ import SplashCursor from './components/splashcursor/SplashCursor'
 import CurvedLoop from './components/curved/CurvedLoop'
 import Contact from './pages/Contact'
 import Footer from './pages/Footer'
-import React from 'react'
+import React , {useEffect} from 'react'
 import './App.css'
 import Projects from './pages/Projects';
 
 function App() {
-
+useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   return (
     <>
@@ -34,7 +41,14 @@ function App() {
 />
   </div> */}
   
-  {/* <Projects/> */}
+  <Projects/>
+
+  {/* <iframe 
+  src="https://aizenx.netlify.app" 
+  width="100%" 
+  height="500" 
+  style={{ border: 'none' }}>
+</iframe> */}
 
 <Contact/>
 

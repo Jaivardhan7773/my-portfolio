@@ -1,9 +1,58 @@
-import React from "react";
-
+import React, { useState } from "react";
+import emailjs from 'emailjs-com';
 const Contact = () => {
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const serviceId = import.meta.env.VITE_SERVICE_ID;
+    const templateId = import.meta.env.VITE_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_PUBLIC_ID;
+
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+    };
+
+    console.log("Template Params: ", templateParams); // sanity check
+
+    emailjs.send(serviceId, templateId, templateParams, publicKey)
+
+      .then((result) => {
+        console.log(result.text);
+        alert('Message Sent!');
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+        });
+      })
+      .catch((error) => {
+        console.log(error.text);
+        alert('Error sending message.');
+      });
+  };
+
+
+
   return (
     <>
-      <section className="relative z-10 overflow-hidden bg-dark py-20 dark:bg-dark lg:py-[120px]">
+      <section id="contact" className="relative z-10 overflow-hidden bg-dark py-20 dark:bg-dark lg:py-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap lg:justify-between">
             <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
@@ -16,8 +65,8 @@ const Contact = () => {
                 </h2>
                 <p className="mb-9 text-white leading-relaxed text-body-color dark:text-dark-6">
                   I'm always open to new opportunities, collaborations, or simply a chat about tech,
-                   projects, or ideas. Whether you have a question, want to work together, or just want to say hello 
-                   — feel free to drop me a message. I’ll get back to you asap. Looking forward to connecting with you!
+                  projects, or ideas. Whether you have a question, want to work together, or just want to say hello
+                  — feel free to drop me a message. I’ll get back to you asap. Looking forward to connecting with you!
                 </p>
                 <div className="mb-8 flex w-full max-w-[370px]">
                   <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary sm:h-[70px] sm:max-w-[70px]">
@@ -112,27 +161,34 @@ const Contact = () => {
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="relative rounded-lg bg-transparent p-8 shadow-lg dark:bg-dark-2 sm:p-12">
-                <form className="text-white">
+                <form className="text-white" onSubmit={handleSubmit}>
                   <ContactInputBox
                     type="text"
                     name="name"
                     placeholder="Your Name"
+                    value={formData.name}
+                    onChange={handleChange}
                   />
                   <ContactInputBox
                     type="text"
                     name="email"
                     placeholder="Your Email"
+                    value={formData.email}
+                    onChange={handleChange}
                   />
-                  <ContactInputBox
+                  {/* <ContactInputBox
                     type="text"
                     name="phone"
                     placeholder="Your Phone"
-                  />
+
+                  /> */}
                   <ContactTextArea
                     row="6"
                     placeholder="Your Message"
-                    name="details"
+                    name="message"
                     defaultValue=""
+                    value={formData.message}
+                    onChange={handleChange}
                   />
                   <div>
                     <button

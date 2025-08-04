@@ -143,7 +143,7 @@ const DeveloperCard = ({ title, image , duration }) => (
 const Skills = () => {
   return (
     <>
-      <div style={{ backgroundColor: "rgb(5 8 22", height: "fit-content" }}>
+      <div style={{ backgroundColor: "rgb(5 8 22", height: "fit-content" }} >
         <div className="container" style={{ paddingTop: "50px", paddingBottom: "50px" }}>
           <div className="row"  style={{ display: "flex" }}>
             {roles.map((role, index) => (
@@ -163,7 +163,7 @@ const Skills = () => {
         </div>
 
 
-        <h1 className="text-center text-white py-10">     <TextType
+        <h1 className="text-center text-white py-10" id="skills">     <TextType
           text={["Skills"]}
           typingSpeed={75}
           pauseDuration={1500}

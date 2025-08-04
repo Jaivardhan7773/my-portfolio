@@ -10,6 +10,12 @@ body {
   /* overflow: hidden; */
 }
 
+a {
+  color: white !important;
+  text-decoration: none !important; 
+}
+
+
 .maincontainer {
   height: 100vh;
   display: flex;
@@ -25,7 +31,17 @@ body {
   color: #fff;
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
   width: 400px;
- 
+
+}
+
+.hoverBtn {
+  color: white;
+  transition: all 0.6s ease;
+}
+
+.hoverBtn:hover {
+  color: black;
+  background-color: white;
 }
 
 .profilepic {
@@ -44,7 +60,7 @@ body {
 
 .stack {
   color: #ccc;
-  
+
   font-size: 1rem;
   margin: 0.5rem 0 1.5rem 0;
 }
@@ -62,6 +78,14 @@ body {
   color: #00ffff;
 }
 
+.social-icon {
+  position: relative;
+  transition: all 0.6s ease;
+}
+
+.social-icon:hover {
+  bottom: 3px;
+}
 
 .rowdiv {
   display: flex;
@@ -135,6 +159,6 @@ p::selection {
 }
 
 
-.custom-text-style{
+.custom-text-style {
   margin-top: 50px;
 }

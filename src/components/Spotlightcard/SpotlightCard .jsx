@@ -19,6 +19,7 @@ const SpotlightCard = ({ children, className = "", spotlightColor = "rgba(255, 2
       ref={divRef}
       onMouseMove={handleMouseMove}
       className={`card-spotlight ${className}`}
+      data-aos="fade-down"
     >
       {children}
     </div>

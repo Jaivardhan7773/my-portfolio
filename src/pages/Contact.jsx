@@ -20,7 +20,7 @@ const Contact = () => {
     const templateId = import.meta.env.VITE_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_PUBLIC_ID;
     // console.log("formData: ", formData);
-    console.log(serviceId, templateId, publicKey);
+    // console.log(serviceId, templateId, publicKey);
 
     const templateParams = {
       from_name: formData.name,

@@ -8,20 +8,19 @@ const Contact = () => {
     message: '',
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+  const [loading, setLoading] = useState(false);
+
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     const serviceId = import.meta.env.VITE_SERVICE_ID;
     const templateId = import.meta.env.VITE_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_PUBLIC_ID;
+    // console.log("formData: ", formData);
+    console.log(serviceId, templateId, publicKey);
 
     const templateParams = {
       from_name: formData.name,
@@ -29,23 +28,25 @@ const Contact = () => {
       message: formData.message,
     };
 
-    console.log("Template Params: ", templateParams); // sanity check
+    // console.log("Template Params: ", templateParams); // sanity check
 
     emailjs.send(serviceId, templateId, templateParams, publicKey)
 
-      .then((result) => {
-        console.log(result.text);
-        alert('Message Sent!');
-        setFormData({
-          name: '',
-          email: '',
-          message: '',
-        });
-      })
-      .catch((error) => {
-        console.log(error.text);
-        alert('Error sending message.');
+    .then((result) => {
+      setLoading(false);
+      alert('Message Sent!');
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
       });
+    })
+    .catch((error) => {
+      console.log("EmailJS Error:", error);
+      alert('Error sending message.');
+    }).finally(() => {
+      setLoading(false);
+    });
   };
 
 
@@ -164,17 +165,17 @@ const Contact = () => {
                 <form className="text-white" onSubmit={handleSubmit}>
                   <ContactInputBox
                     type="text"
-                    name="name"
+                    // name="name"
                     placeholder="Your Name"
                     value={formData.name}
-                    onChange={handleChange}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   />
                   <ContactInputBox
                     type="text"
-                    name="email"
+                    // name="email"
                     placeholder="Your Email"
                     value={formData.email}
-                    onChange={handleChange}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   />
                   {/* <ContactInputBox
                     type="text"
@@ -185,17 +186,24 @@ const Contact = () => {
                   <ContactTextArea
                     row="6"
                     placeholder="Your Message"
-                    name="message"
-                    defaultValue=""
+                    // name="message"
                     value={formData.message}
-                    onChange={handleChange}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   />
                   <div>
                     <button
                       type="submit"
                       className="w-full rounded border border-primary bg-primary p-3 text-white transition hover:bg-opacity-90"
+                    disabled={loading}
                     >
-                      Send Message
+                      {loading ? (
+                        <>
+                          Sending...
+                          <i className="fa-solid fa-spinner animate-spin ml-2" />
+                        </>
+                      ) : (
+                        'Send Message'
+                      )}
                     </button>
                   </div>
                 </form>
@@ -1018,30 +1026,32 @@ const Contact = () => {
 
 export default Contact;
 
-const ContactTextArea = ({ row, placeholder, name, defaultValue }) => {
+const ContactTextArea = ({ row, placeholder, name, defaultValue  , value , onChange}) => {
   return (
     <>
       <div className="mb-6">
         <textarea
           rows={row}
           placeholder={placeholder}
-          name={name}
+          value={value}           // ✅ Controlled input
+          onChange={onChange}
           className="w-full resize-none rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-dark-6"
-          defaultValue={defaultValue}
+          // defaultValue={defaultValue}
         />
       </div>
     </>
   );
 };
 
-const ContactInputBox = ({ type, placeholder, name }) => {
+const ContactInputBox = ({ type, placeholder, name , value , onChange }) => {
   return (
     <>
       <div className="mb-6">
         <input
           type={type}
           placeholder={placeholder}
-          name={name}
+          value={value}           // ✅ Controlled input
+          onChange={onChange}
           className="w-full rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-dark-6"
         />
       </div>

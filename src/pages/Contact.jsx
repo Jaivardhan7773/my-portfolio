@@ -96,7 +96,7 @@ const Contact = () => {
                   Contact Us
                 </span>
                 <h2 className="mb-6 text-[32px] font-bold uppercase text-white dark:text-white sm:text-[40px] lg:text-[36px] xl:text-[40px]">
-                  GET IN TOUCH WITH US
+                  Let's connect
                 </h2>
                 <p className="mb-9 text-white leading-relaxed text-body-color dark:text-dark-6">
                   I'm always open to new opportunities, collaborations, or simply a chat about tech,

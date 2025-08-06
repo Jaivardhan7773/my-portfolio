@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import emailjs from 'emailjs-com';
+import toast from 'react-hot-toast';
+import ReCAPTCHA from "react-google-recaptcha";
 const Contact = () => {
 
   const [formData, setFormData] = useState({
@@ -8,12 +10,44 @@ const Contact = () => {
     message: '',
   });
 
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+
   const [loading, setLoading] = useState(false);
 
 
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!captchaVerified) {
+      toast.error("Please verify that you are not a robot.");
+      return;
+    }
+
+    const { name, email, message } = formData;
+
+    if (!name.trim()) {
+      toast.error("Name is required.");
+      console.log("Name is required")
+      return;
+    }
+    // Email validation using regex
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email.trim()) {
+      toast.error("Email is required.");
+      console.log("Email is required")
+      return;
+    } else if (!emailRegex.test(email)) {
+      toast.error("Invalid email format.");
+      console.log("Invalid Format")
+      return;
+    }
+
+    if (!message.trim() || message.trim().length < 10) {
+      toast.error("Message must be at least 10 characters.");
+      console.log("Message is required")
+      return;
+    }
     setLoading(true);
 
     const serviceId = import.meta.env.VITE_SERVICE_ID;
@@ -32,21 +66,21 @@ const Contact = () => {
 
     emailjs.send(serviceId, templateId, templateParams, publicKey)
 
-    .then((result) => {
-      setLoading(false);
-      alert('Message Sent!');
-      setFormData({
-        name: '',
-        email: '',
-        message: '',
+      .then((result) => {
+        setLoading(false);
+        toast.success('Message sent!');
+        setFormData({
+          name: '',
+          email: '',
+          message: '',
+        });
+      })
+      .catch((error) => {
+        console.log("EmailJS Error:", error);
+        toast.error('Something went wrong.');
+      }).finally(() => {
+        setLoading(false);
       });
-    })
-    .catch((error) => {
-      console.log("EmailJS Error:", error);
-      alert('Error sending message.');
-    }).finally(() => {
-      setLoading(false);
-    });
   };
 
 
@@ -190,11 +224,18 @@ const Contact = () => {
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   />
+
+                  <div style={{ width: '100%', marginBottom: '1rem' }}>
+                    <ReCAPTCHA
+                      sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                      onChange={() => setCaptchaVerified(true)}
+                    />
+                  </div>
                   <div>
                     <button
                       type="submit"
                       className="w-full rounded border border-primary bg-primary p-3 text-white transition hover:bg-opacity-90"
-                    disabled={loading}
+                      disabled={loading}
                     >
                       {loading ? (
                         <>
@@ -205,6 +246,7 @@ const Contact = () => {
                         'Send Message'
                       )}
                     </button>
+
                   </div>
                 </form>
                 <div>
@@ -1026,7 +1068,7 @@ const Contact = () => {
 
 export default Contact;
 
-const ContactTextArea = ({ row, placeholder, name, defaultValue  , value , onChange}) => {
+const ContactTextArea = ({ row, placeholder, name, defaultValue, value, onChange }) => {
   return (
     <>
       <div className="mb-6">
@@ -1036,14 +1078,14 @@ const ContactTextArea = ({ row, placeholder, name, defaultValue  , value , onCha
           value={value}           // ✅ Controlled input
           onChange={onChange}
           className="w-full resize-none rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-dark-6"
-          // defaultValue={defaultValue}
+        // defaultValue={defaultValue}
         />
       </div>
     </>
   );
 };
 
-const ContactInputBox = ({ type, placeholder, name , value , onChange }) => {
+const ContactInputBox = ({ type, placeholder, name, value, onChange }) => {
   return (
     <>
       <div className="mb-6">

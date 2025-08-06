@@ -1,15 +1,16 @@
 import TextPressure from '../components/textpressure/TextPressure'
 import TextType from '../components/texttype/TextType';
 import Magnet from '../components/magnetbutton/Magnet'
-
-
+// import pfp from '../assets/pfp.webp'
+// import profile from '../assets/profile.jpg'
+import avatar from '../assets/myavatar.png'
 const Home = () => {
     return (
         <>
 
             <div className="maincontainer" id='home'>
                 <div className="homedata">
-                    <img src="https://i.ibb.co/KBBZSKk/myavatar.png" alt="profile" className="profilepic block mx-auto" data-aos="fade-up"
+                    <img src={avatar} alt="profile" className="profilepic block mx-auto" data-aos="fade-up"
                         data-aos-duration="400" />
                     {/* <h1 className="name">Jaivardhan</h1> */}
                     <div data-aos="fade-up"
@@ -97,7 +98,7 @@ const Home = () => {
                     <div className="rowdiv">
                         <div className="myimgdiv" data-aos="fade-up"
                             data-aos-duration="500">
-                            <img src="https://i.ibb.co/7JNYpgQ9/myavatarjpg.jpg" alt="profile" className='myimage' />
+                            <img src={profile} alt="profile" className='myimage' />
                         </div>
                         <div className="aboutusdiv" data-aos="fade-up"
                             data-aos-duration="1000">

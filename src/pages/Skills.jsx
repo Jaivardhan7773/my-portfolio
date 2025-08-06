@@ -1,25 +1,57 @@
 import React from "react";
 import SpotlightCard from "../components/Spotlightcard/SpotlightCard ";
 import TextType from '../components/texttype/TextType'
+import html from '../assets/skills/html.webp'
+import css from '../assets/skills/css.webp'
+import js from '../assets/skills/js.webp'
+import tailwind from '../assets/skills/tailwind.png'
+import react from '../assets/skills/react.webp'
+import redux from '../assets/skills/redux.webp'
+import zustand from '../assets/skills/zustand.png'
+import bits from '../assets/skills/bits.webp'
+import bootstrap from '../assets/skills/bootstrap.webp'
+import node from '../assets/skills/node.webp'
+import express from '../assets/skills/express.webp'
+import mongodb from '../assets/skills/mongodb.webp'
+import mongoose from '../assets/skills/mongoose.png'
+import git from '../assets/skills/git.webp'
+import github from '../assets/skills/github.webp'
+import socket from '../assets/skills/socket.webp'
+import npm from '../assets/skills/npm.webp'
+import vscode from '../assets/skills/vscode.webp'
+import api from '../assets/skills/api.svg'
+import vercel from '../assets/skills/vercel.png'
+import netlify from '../assets/skills/netlify.svg'
+import mongodbcompass from '../assets/skills/mongodbcompass.png'
+import postman from '../assets/skills/postman.webp'
+import cloudnary from '../assets/skills/cloudnary.png'
+
+import webdev from '../assets/skills/webdev.png'
+import reactdev from '../assets/skills/reactdev.png'
+import backdev from '../assets/skills/backdev.png'
+import fulldev from '../assets/skills/fulldev.png'
+
+
+
 const roles = [
   {
     title: "Web Developer",
-    image: "https://mern-rajesh-portfolio.web.app/assets/web.png",
+    image: webdev,
     duration:500,
   },
   {
     title: "React Developer",
-    image: "https://mern-rajesh-portfolio.web.app/assets/frontend.png",
+    image: reactdev,
     duration:700,
   },
   {
     title: "Backend Developer",
-    image: "https://mern-rajesh-portfolio.web.app/assets/backend.png",
+    image: backdev,
     duration:900,
   },
   {
     title: "Full Stack Developer",
-    image: "https://mern-rajesh-portfolio.web.app/assets/fullStack.png",
+    image: fulldev,
     duration:1100,
   },
 ];
@@ -28,105 +60,106 @@ const roles = [
 const technologies = [
   {
     name: "HTML 5",
-    icon: "https://cdn.iconscout.com/icon/free/png-512/free-html5-40-1175193.png?f=webp&w=512",
+    icon: html,
   },
   {
     name: "CSS 3",
-    icon: "https://cdn.iconscout.com/icon/free/png-512/free-css-131-722685.png?f=webp&w=512",
+    icon: css,
   },
   {
     name: "JavaScript",
-    icon: "https://cdn.iconscout.com/icon/free/png-512/free-javascript-2752148-2284965.png?f=webp&w=512",
+    icon: js,
   },
   {
     name: "Tailwind CSS",
-    icon: "https://img.icons8.com/?size=96&id=4PiNHtUJVbLs&format=png",
+    icon: tailwind,
   },
   {
     name: "React JS",
-    icon: "https://cdn.iconscout.com/icon/free/png-512/free-react-3521666-2945110.png?f=webp&w=512",
+    icon: react,
   },
   {
     name: "Redux",
-    icon: "https://cdn.iconscout.com/icon/free/png-512/free-redux-283024.png?f=webp&w=512",
+    icon: redux,
   },
   {
     name: "Zustand",
-    icon: "https://miro.medium.com/v2/resize:fit:800/1*MX7sS67n80ViuJlNewAmuA.png",
+    icon: zustand,
   },
   {
     name: "React bits",
-    icon: "https://cdn.iconscout.com/icon/free/png-512/free-react-13235229-10918763.png?f=webp&w=512",
+    icon: bits,
   },
-
   {
     name: "Bootstrap 5",
-    icon: "https://cdn.iconscout.com/icon/free/png-512/free-bootstrap-7-1175254.png?f=webp&w=512",
+    icon: bootstrap,
   },
   {
     name: "Node JS",
-    icon: "https://cdn.iconscout.com/icon/free/png-512/free-node-js-1174925.png?f=webp&w=512",
+    icon: node,
   },
   {
     name: "Express JS",
-    icon: "https://cdn.iconscout.com/icon/premium/png-512-thumb/express-js-11217744-9200748.png?f=webp&w=512",
+    icon: express,
   },
   {
     name: "MongoDB",
-    icon: "https://cdn.iconscout.com/icon/free/png-512/free-mongodb-5-1175140.png?f=webp&w=512",
+    icon: mongodb,
   },
   {
     name: "Mongoose",
-    icon: "https://img.icons8.com/?size=96&id=gKfcEStXI1Hm&format=png",
+    icon: mongoose,
   },
   {
     name: "Git",
-    icon: "https://cdn.iconscout.com/icon/free/png-512/free-git-17-1175218.png?f=webp&w=512",
+    icon: git,
   },
   {
     name: "GitHup",
-    icon: "https://cdn.iconscout.com/icon/free/png-512/free-github-40-432516.png?f=webp&w=512",
+    icon: github,
   },
   {
     name: "Socket io",
-    icon: "https://cdn.iconscout.com/icon/free/png-512/free-socket-54-282608.png?f=webp&w=512",
+    icon: socket,
   },
   {
     name: "Npm",
-    icon: "https://cdn.iconscout.com/icon/premium/png-512-thumb/npm-11796944-9632855.png?f=webp&w=512",
+    icon: npm,
   },
 ];
+
 
 const tools = [
   {
     name: "VS Code",
-    icon: "https://cdn.iconscout.com/icon/free/png-512/free-vscode-13235441-10918879.png?f=webp&w=512",
+    icon: vscode,
   },
   {
     name: "Rest API",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg",
+    icon: api,
   },
   {
     name: "Vercel",
-    icon: "https://flow-public.nimbuspop.com/flow-apps/vercel.png",
+    icon: vercel,
   },
   {
     name: "Netlify",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg",
+    icon: netlify,
   },
   {
     name: "Mongodb Compass",
-    icon: "https://mern-rajesh-portfolio.web.app/assets/tools/mongodbCompass.png",
+    icon: mongodbcompass,
   },
   {
     name: "Postman",
-    icon: "https://cdn.iconscout.com/icon/free/png-512/free-postman-3521648-2945092.png?f=webp&w=512",
+    icon: postman,
   },
   {
     name: "Cloudinary",
-    icon: "https://miro.medium.com/v2/resize:fit:1000/1*7CrSGB37vYF6kWga4PbJGA.png",
+    icon: cloudnary,
   },
 ];
+
 
 
 const DeveloperCard = ({ title, image , duration }) => (

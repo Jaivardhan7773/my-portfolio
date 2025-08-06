@@ -2,7 +2,7 @@ import TextPressure from '../components/textpressure/TextPressure'
 import TextType from '../components/texttype/TextType';
 import Magnet from '../components/magnetbutton/Magnet'
 // import pfp from '../assets/pfp.webp'
-// import profile from '../assets/profile.jpg'
+import profile from '../assets/profile.jpg'
 import avatar from '../assets/myavatar.png'
 const Home = () => {
     return (

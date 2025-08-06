@@ -1,5 +1,8 @@
 import { useState } from "react";
-
+import aizenx from '../assets/projectss/aizenx.png';
+import speedtalk from '../assets/projectss/speedtalk.png';
+import astrajay from '../assets/projectss/astrajay.png';
+import philosophy from '../assets/projectss/philosophy.png';
 const MAX_VISIBLE_TECH = 4;
 
 const projects = [
@@ -8,7 +11,7 @@ const projects = [
         level: "Advance",
         description: "AizenX is an advanced E-Learning platform built using the MERN stack, featuring a clean, responsive UI and a seamless user experience. It includes role-based access control (Users, Editors, Admins), a dynamic blog system, a fully functional admin panel, and fake payment integration for premium content. Every feature is designed with scalability, clarity, and modern usability in mind—making it one of the most structured and feature-rich platforms I've built.",
         link: "https://aizenx.netlify.app",
-        image: "https://i.ibb.co/5WgsqN58/Screenshot-2025-05-05-192142.png",
+        image: aizenx,
         tech: [
             "React.js",
             "Node.js",
@@ -33,7 +36,7 @@ const projects = [
         level: "Advance",
         description: "SpeedTalk Shitt is a sleek, real-time chat application built with React and Socket.IO, offering a smooth and responsive user experience. It features chat rooms, a live typing indicator, and full emoji support to make conversations more interactive and fun. Designed with clean UI and real-time performance in mind, it's one of the most engaging and technically satisfying communication apps I’ve built.",
         link: "https://speedtalk.netlify.app",
-        image: "https://i.ibb.co/n8zrxqkg/ae220394-8f76-4b9f-b5b7-1a73d5b3fa68.png",
+        image: speedtalk,
         tech: [
             "React.js",
             "Socket.IO",
@@ -54,7 +57,7 @@ const projects = [
         level: "UI",
         description: "Astra Jay is a cutting-edge portfolio site and experimental UI playground, built with futuristic design concepts, smooth animations, and a fully responsive layout. It showcases creative front-end experimentation and serves as a sandbox for trying out bold design ideas and micro-interactions. This is where creativity meets code—an artistic, high-performance space crafted to impress and inspire.",
         link: "https://astrajay.netlify.app",
-        image: "https://i.ibb.co/TDDkHdGP/Screenshot-2025-08-04-144151.png",
+        image: astrajay,
         tech: [
             "HTML5",
             "CSS3",
@@ -68,7 +71,7 @@ const projects = [
         level: "UI",
         description: "Philosophy is a beautifully crafted web application built with React, CSS, and Bootstrap 5. It showcases one of the best and most responsive UIs I’ve ever created—designed with attention to detail, fluid responsiveness, and a clean, modern layout. Whether on desktop or mobile, the experience remains smooth, elegant, and engaging, making it a perfect blend of performance and aesthetics.",
         link: "https://philosophy-gamma.vercel.app",
-        image: "https://i.ibb.co/s96bWsX4/Screenshot-2025-08-04-142317.png",
+        image: philosophy,
         tech: [
             "React.js",
             "CSS3",

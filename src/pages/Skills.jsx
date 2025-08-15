@@ -164,11 +164,11 @@ const tools = [
 
 const DeveloperCard = ({ title, image , duration }) => (
   <div className="skill-col"  data-aos="fade-right" data-aos-duration={duration}>
-    <img src={image} alt={title} className="block mx-auto animate-spin" style={{ maxHeight: "50px",
+    <img src={image} alt={title || "Jaivardhan singh"} className="block mx-auto animate-spin" style={{ maxHeight: "50px",
        maxWidth: "50px",
         margin: "10px" 
             }} />
-    <h4 className="skill-title">{title}</h4>
+    <p className="skill-title fs-4 fw-normal">{title}</p>
   </div>
 );
 
@@ -209,8 +209,8 @@ const Skills = () => {
             {technologies.map((tech, index) => (
               <div className="col" key={index}>
                 <div className="tech" style={{ textAlign: "center", padding: "40px" }}>
-                  <img src={tech.icon} alt={tech.name} className="block mx-auto" data-aos="zoom-out-up"  style={{ width: "70px", height: "60px" }} />
-                  <span className="tech-title"  data-aos="zoom-out-down" style={{ color: "white", display: "block", marginTop: "5px" }}>
+                  <img src={tech.icon} alt={tech.name || "Jaivardhan singh"} className="block mx-auto" data-aos="zoom-out-up"  style={{ width: "70px", height: "60px" }} />
+                  <span className="tech-title"  data-aos="zoom-out-up" style={{ color: "white", display: "block", marginTop: "5px" }}>
                     {tech.name}
                   </span>
                 </div>
@@ -225,8 +225,8 @@ const Skills = () => {
             {tools.map((tool, index) => (
               <div className="col" key={index}>
                 <div className="tech" style={{ textAlign: "center", padding: "10px" }}>
-                  <img src={tool.icon} alt={tool.name}  className="block mx-auto" data-aos="zoom-out-up"  style={{ width: "60px", height: "60px"  }} />
-                  <span className="tech-title"  data-aos="zoom-out-down" style={{ color: "white", display: "block", marginTop: "5px" }}>
+                  <img src={tool.icon} alt={tool.name || "Jaivardhan singh"}  className="block mx-auto" data-aos="zoom-out-up"  style={{ width: "60px", height: "60px"  }} />
+                  <span className="tech-title"  data-aos="zoom-out-up" style={{ color: "white", display: "block", marginTop: "5px" }}>
                     {tool.name}
                   </span>
                 </div>

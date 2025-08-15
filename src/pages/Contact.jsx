@@ -119,9 +119,9 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="w-full">
-                    <h4 className="mb-1 text-xl font-bold text-white dark:text-white">
+                    <h3 className="mb-1 text-xl font-bold fs-4 text-white dark:text-white">
                       My Location
-                    </h4>
+                    </h3>
                     <p className="text-white text-body-color dark:text-dark-6">
                       Rajpura 140401, punjab , india | kuchaman-didwana , rajasthan , india
                     </p>
@@ -159,9 +159,9 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="w-full">
-                    <h4 className="mb-1 text-xl font-bold text-white dark:text-white">
+                    <h3 className="mb-1 text-xl fs-4 font-bold text-white dark:text-white">
                       Phone Number
-                    </h4>
+                    </h3>
                     <p className="text-white text-body-color dark:text-dark-6">
                       +91 6377469206
                     </p>
@@ -184,9 +184,9 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="w-full">
-                    <h4 className="mb-1 text-xl font-bold text-white dark:text-white">
+                    <h3 className="mb-1 text-xl font-bold fs-4 text-white dark:text-white">
                       Email Address
-                    </h4>
+                    </h3>
                     <p className="text-white text-body-color dark:text-dark-6">
                       jaivardhansinghrathore17@gmail.com
                     </p>

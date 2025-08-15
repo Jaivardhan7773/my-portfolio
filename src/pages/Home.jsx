@@ -2,15 +2,15 @@ import TextPressure from '../components/textpressure/TextPressure'
 import TextType from '../components/texttype/TextType';
 import Magnet from '../components/magnetbutton/Magnet'
 // import pfp from '../assets/pfp.webp'
-import profile from '../assets/profile.jpg'
-import avatar from '../assets/myavatar.png'
+import profile from '../assets/profilenew.jpg'
+import avatar from '../assets/myavatarnew.png'
 const Home = () => {
     return (
         <>
 
             <div className="maincontainer" id='home'>
                 <div className="homedata">
-                    <img src={avatar} alt="profile" className="profilepic block mx-auto" data-aos="fade-up"
+                    <img src={avatar} alt="Jaivardhan singh profile image" className="profilepic block mx-auto" data-aos="fade-up"
                         data-aos-duration="400" />
                     {/* <h1 className="name">Jaivardhan</h1> */}
                     <div data-aos="fade-up"
@@ -42,13 +42,13 @@ const Home = () => {
 
                     </div>
                     <div className="socials">
-                        <a href="mailto:jaivardhansinghrathore17@gmail.com"><i data-aos="fade-up"
+                        <a href="mailto:jaivardhansinghrathore17@gmail.com" aria-label="Send email to Jaivardhan Singh"><i data-aos="fade-up"
                             data-aos-duration="500" className="fa fa-envelope social-icon" ></i></a>
-                        <a href="https://github.com/Jaivardhan7773" target='_blank'><i data-aos="fade-up"
+                        <a href="https://github.com/Jaivardhan7773" target='_blank' aria-label="Visit Jaivardhan Singh's GitHub profile"><i data-aos="fade-up"
                             data-aos-duration="600" className="fa-brands fa-github social-icon"></i></a>
-                        <a href="https://www.linkedin.com/in/jaivardhan7773/" target='_blank'><i data-aos="fade-up"
+                        <a href="https://www.linkedin.com/in/jaivardhan7773/" target='_blank' aria-label="Visit Jaivardhan Singh's LinkedIn profile"><i data-aos="fade-up"
                             data-aos-duration="700" className="fa-brands fa-linkedin social-icon"></i></a>
-                        <a href="https://www.instagram.com/jaivardhan7773_/" target='_blank'><i data-aos="fade-up"
+                        <a href="https://www.instagram.com/jaivardhan7773_/" target='_blank' aria-label="Visit Jaivardhan Singh's Instagram profile"><i data-aos="fade-up"
                             data-aos-duration="800" className="fa-brands fa-instagram social-icon"></i></a>
 
                     </div>
@@ -98,12 +98,12 @@ const Home = () => {
                     <div className="rowdiv">
                         <div className="myimgdiv" data-aos="fade-up"
                             data-aos-duration="500">
-                            <img src={profile} alt="profile" className='myimage' />
+                            <img src={profile} alt="Jaivardhan Singh about us profile" className='myimage' />
                         </div>
                         <div className="aboutusdiv" data-aos="fade-up"
                             data-aos-duration="1000">
                             <p className='aboutustext'  >
-                                Hi, I'm <strong>Jaivardhan</strong>, a <strong>MERN Stack Developer</strong> and a <strong>B.Sc. graduate</strong>, eager to explore opportunities in <strong>Web Development</strong>.
+                                Hi, I'm <strong>Jaivardhan Singh</strong>, a <strong>MERN Stack Developer</strong> and a <strong>B.Sc. graduate</strong>, eager to explore opportunities in <strong>Web Development</strong>.
                                 I have completed <strong>6 months of hands-on MERN Stack training</strong> at <strong>Excellence Technology, Mohali</strong>, where I built several <strong>real-world projects</strong> and strengthened my full-stack development skills.
                                 I’m committed to <strong>expanding my knowledge</strong> and <strong>continuous learning</strong>, aiming to fill my life with amazing memories and growth.
                                 I have a passion for <strong>modern web technologies</strong> like <strong>MongoDB</strong>, <strong>JWT</strong>, <strong>Redux Toolkit</strong>, and <strong>React</strong>.

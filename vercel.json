@@ -1,5 +1,6 @@
 {
+  "functions": {},
   "rewrites": [
-    { "source": "/(.*)", "destination": "/api/prerender" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

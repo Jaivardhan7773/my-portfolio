@@ -58,7 +58,7 @@ const Home = () => {
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                href="https://drive.google.com/file/d/17K0CHuwaTvQ5V5DOMktT1G1WVgIJWlCH/view?usp=drive_link"
+                                href="https://drive.google.com/file/d/1_7ffHV3sWnyJ-qgmZUQ3xdhCb5qS_hzD/view?usp=sharing"
                             >
                                 <button data-aos="fade-up"
                                     data-aos-duration="1000" className='border border-white dark:border-dark-2 hoverBtn inline-flex items-center justify-center py-1 px-3 text-base font-medium disabled:bg-gray-3 disabled:border-gray-3 disabled:text-dark-5'

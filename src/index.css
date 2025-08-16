@@ -7,8 +7,6 @@ body {
   background: url('./assets/bg2.gif') no-repeat center center fixed;
   background-size: cover;
   backdrop-filter: blur(5px);
-  /* cursor: url("/public/vite.svg"), auto; */
-  /* overflow: hidden; */
 }
 
 a {

@@ -164,7 +164,7 @@ const tools = [
 
 const DeveloperCard = ({ title, image , duration }) => (
   <div className="skill-col"  data-aos="fade-right" data-aos-duration={duration}>
-    <img src={image} alt={title || "Jaivardhan singh"} className="block mx-auto animate-spin" style={{ maxHeight: "50px",
+    <img src={image} alt={title || "Jaivardhan singh"} className="block mx-auto animate-spin" loading="lazy" style={{ maxHeight: "50px",
        maxWidth: "50px",
         margin: "10px" 
             }} />
@@ -209,7 +209,7 @@ const Skills = () => {
             {technologies.map((tech, index) => (
               <div className="col" key={index}>
                 <div className="tech" style={{ textAlign: "center", padding: "40px" }}>
-                  <img src={tech.icon} alt={tech.name || "Jaivardhan singh"} className="block mx-auto" data-aos="zoom-out-up"  style={{ width: "70px", height: "60px" }} />
+                  <img src={tech.icon} alt={tech.name || "Jaivardhan singh"} loading="lazy" className="block mx-auto" data-aos="zoom-out-up"  style={{ width: "70px", height: "60px" }} />
                   <span className="tech-title"  data-aos="zoom-out-up" style={{ color: "white", display: "block", marginTop: "5px" }}>
                     {tech.name}
                   </span>
@@ -225,7 +225,7 @@ const Skills = () => {
             {tools.map((tool, index) => (
               <div className="col" key={index}>
                 <div className="tech" style={{ textAlign: "center", padding: "10px" }}>
-                  <img src={tool.icon} alt={tool.name || "Jaivardhan singh"}  className="block mx-auto" data-aos="zoom-out-up"  style={{ width: "60px", height: "60px"  }} />
+                  <img src={tool.icon} alt={tool.name || "Jaivardhan singh"} loading="lazy"  className="block mx-auto" data-aos="zoom-out-up"  style={{ width: "60px", height: "60px"  }} />
                   <span className="tech-title"  data-aos="zoom-out-up" style={{ color: "white", display: "block", marginTop: "5px" }}>
                     {tool.name}
                   </span>

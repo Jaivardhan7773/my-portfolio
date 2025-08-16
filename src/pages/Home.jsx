@@ -10,7 +10,7 @@ const Home = () => {
 
             <div className="maincontainer" id='home'>
                 <div className="homedata">
-                    <img src={avatar} alt="Jaivardhan singh profile image" className="profilepic block mx-auto" data-aos="fade-up"
+                    <img src={avatar} alt="Jaivardhan singh profile image" loading="lazy" className="profilepic block mx-auto" data-aos="fade-up"
                         data-aos-duration="400" />
                     {/* <h1 className="name">Jaivardhan</h1> */}
                     <div data-aos="fade-up"
@@ -98,7 +98,7 @@ const Home = () => {
                     <div className="rowdiv">
                         <div className="myimgdiv" data-aos="fade-up"
                             data-aos-duration="500">
-                            <img src={profile} alt="Jaivardhan Singh about us profile" className='myimage' />
+                            <img src={profile} alt="Jaivardhan Singh about us profile" className='myimage' loading="lazy" />
                         </div>
                         <div className="aboutusdiv" data-aos="fade-up"
                             data-aos-duration="1000">

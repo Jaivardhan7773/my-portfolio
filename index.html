@@ -7,18 +7,31 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Jaivardhan Singh | MERN Stack Developer | Portfolio</title>
+  <title>Jaivardhan Singh | MERN Stack Developer | Portfolio | Rajpura</title>
 
   <!-- ✅ Google Site Verification -->
   <meta name="google-site-verification" content="uuIAxn9Wh0i1O7NKgcIwHlHIcgCiXCydoM45VZ5vffU" />
+
+  <!-- ✅ Extra SEO for Location Specific Search -->
+  <meta name="geo.region" content="IN-PB" /> <!-- Punjab -->
+  <meta name="geo.placename" content="Rajpura" />
+  <meta name="geo.position" content="30.478;76.595" />
+  <meta name="ICBM" content="30.478, 76.595" />
+
+  <meta name="geo.region" content="IN-RJ" /> <!-- Rajasthan -->
+  <meta name="geo.placename" content="Jharod, Nagaur" />
+  <meta name="geo.position" content="27.2;74.6" />
+  <meta name="ICBM" content="27.2, 74.6" />
+
 
   <!-- 🔍 Basic SEO -->
   <meta name="description"
     content="I’m Jaivardhan Singh, a passionate MERN stack developer. Check out my projects like AizenX and Speedtalk. Let’s build something awesome!" />
   <meta name="keywords"
-    content="Jaivardhan Singh, MERN Stack Developer, React Developer, Full Stack Developer, Web Developer, AizenX, EventsHub, Speedtalk,  Node.js, MongoDB, JavaScript, Portfolio , jharod , rajpura , jaipur , rajasthan , nagaur , rathore" />
+    content="Jaivardhan Singh, MERN Stack Developer, React Developer, Full Stack Developer, Web Developer, AizenX, EventsHub, Speedtalk, Node.js, MongoDB, JavaScript, Portfolio, Rajpura, Jaipur, Rajasthan, Nagaur, Rathore" />
   <meta name="author" content="Jaivardhan Singh" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <!-- ⭐ Added for better crawling -->
 
   <!-- 🖼️ Open Graph / Facebook -->
   <meta property="og:title" content="Jaivardhan Singh | MERN Stack Developer" />
@@ -28,6 +41,7 @@
   <meta property="og:image" content="https://jaivardhan.vercel.app/imagee.png" />
   <meta property="og:url" content="https://jaivardhan.vercel.app/" />
   <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" /> <!-- ⭐ Added locale for OG -->
 
   <!-- 🐦 Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -47,33 +61,59 @@
       "sameAs": [
         "https://www.linkedin.com/in/jaivardhan7773",
         "https://github.com/Jaivardhan7773",
-        "https://www.instagram.com/jaivardhan7773_/"
+        "https://www.instagram.com/jaivardhan7773_/",
+        "https://twitter.com/Jay_Vardhan7773"
       ],
       "jobTitle": "MERN Stack Developer",
       "worksFor": {
         "@type": "Organization",
         "name": "Self-employed - Looking for full-time opportunities"
       },
-      "image": "/imagee.png",
-      "description": "Portfolio website of Jaivardhan Singh, a MERN Stack Developer showcasing work like AizenX and EventsHub."
+      "image": "https://jaivardhan.vercel.app/imagee.png",
+      "description": "Portfolio website of Jaivardhan Singh Rajpura, a MERN Stack Developer showcasing work like AizenX and EventsHub.",
+     "address": [
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "Rajpura",
+          "addressRegion": "Punjab",
+          "addressCountry": "India"
+        },
+        {
+          "@type": "PostalAddress",
+          "addressLocality": "Maulasar",
+          "addressRegion": "Rajasthan",
+          "addressCountry": "India"
+        }
+      ]
     }
   </script>
 
   <!-- 🌐 Canonical URL -->
   <link rel="canonical" href="https://jaivardhan.vercel.app/" />
 
-  <!-- 🌐 Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" >
+  <!-- 🌐 Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png"> <!-- ⭐ Added Apple touch icon -->
 
   <!-- 💅 Fonts / CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print"
-    onload="this.media='all' " />
+    onload="this.media='all'" />
 
+  <!-- 🔗 Identity Links -->
+  <link rel="me" href="https://github.com/Jaivardhan7773">
+  <link rel="me" href="https://www.linkedin.com/in/jaivardhan7773">
+  <link rel="me" href="https://www.instagram.com/jaivardhan7773_/">
+  <link rel="me" href="https://twitter.com/Jay_Vardhan7773"> <!-- ⭐ Added Twitter identity -->
 
-  <!-- 📱 Apple Meta -->
+  <!-- 📱 Mobile / PWA -->
   <meta name="theme-color" content="#000000" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="manifest" href="/manifest.json"> <!-- ⭐ Added manifest for PWA -->
+
+  <!-- ⚡ Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin> <!-- ⭐ Preconnect for faster fonts -->
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com"> <!-- ⭐ DNS Prefetch -->
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YZCDK60RE"></script>
@@ -81,11 +121,10 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-  
+
     gtag('config', 'G-7YZCDK60RE');
   </script>
 </head>
-
 
 <body>
   <div id="root"></div>

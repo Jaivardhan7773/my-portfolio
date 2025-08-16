@@ -118,7 +118,7 @@ const Projects = () => {
                     <div className="grid gap-8 sm:grid-cols-2 pt-5 lg:grid-cols-3">
                         {projects.map((project, index) => (
                             <div key={index} className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300 m">
-                                <img src={project.image} alt={project.name} className="w-full h-60 object-cover" />
+                                <img src={project.image} alt={project.name || "Jaivardhan singh "} loading="lazy" className="w-full h-60 object-cover" />
                                 <div className="p-6 flex flex-col justify-between">
                                     <div>
                                         <h3 className="text-xl font-semibold mb-2">{project.name} (<strong className="text-blue-800">{project.level}</strong>)</h3>

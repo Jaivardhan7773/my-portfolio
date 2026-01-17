@@ -158,14 +158,7 @@ const Contact = () => {
                       </defs>
                     </svg>
                   </div>
-                  <div className="w-full">
-                    <h3 className="mb-1 text-xl fs-4 font-bold text-white dark:text-white">
-                      Phone Number
-                    </h3>
-                    <p className="text-white text-body-color dark:text-dark-6">
-                      +91 6377469206
-                    </p>
-                  </div>
+
                 </div>
 
                 <div className="mb-8 flex w-full max-w-[370px]">
